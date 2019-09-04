@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - msnoise = msnoise.scripts.msnoise:run
@@ -22,6 +22,24 @@ requirements:
     - pip
   run:
     - python
+    - setuptools
+    - numpy
+    - scipy
+    - pandas
+    - matplotlib
+    - sqlalchemy
+    - obspy
+    - click
+    - pymysql
+    - flask
+    - flask-admin
+    - flask-wtf
+    - markdown
+    - folium
+    - wtforms
+    - jinja2
+    - scandir
+    - logbook
 
 test:
   imports:
