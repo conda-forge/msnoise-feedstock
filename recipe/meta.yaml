@@ -1,5 +1,5 @@
 {% set name = "msnoise" %}
-{% set version = "1.6" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5795f0d452e9ad7728e85d8474b347f40fbc2238273a8145818979791e0725c2
+  sha256: dc94e23d6f022c7e41fadc2acdfd585cee2853bfb2edf1897e5a875bbfb955ac
 
 build:
   noarch: python
