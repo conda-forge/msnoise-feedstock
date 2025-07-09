@@ -11,18 +11,18 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - msnoise = msnoise.scripts.msnoise:run
 
 requirements:
   host:
-    - python 3.9
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - setuptools
     - numpy
     - scipy
@@ -43,6 +43,8 @@ requirements:
     - logbook
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - msnoise
     - msnoise.test
